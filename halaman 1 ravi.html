@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Web Designer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #000;
+      --text-light: #fff;
+      --text-muted: #b5b5b5;
+      --border: rgba(255,255,255,0.15);
+      --accent: #ffffff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      color: var(--text-light);
+      background-color: var(--bg-dark);
+      overflow-x: hidden;
+    }
+
+    /* === NAVBAR === */
+    .nav {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      gap: 30px;
+      padding: 30px 80px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+    }
+
+    .nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .nav a:hover {
+      color: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    /* === HERO SECTION === */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 80px 100px;
+    }
+
+    .left {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 56px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    h1 span {
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    p.lead {
+      color: var(--text-muted);
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 36px;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn-main {
+      background: #fff;
+      color: #000;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-main:hover {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .btn-ghost {
+      border: 2px solid var(--border);
+      padding: 12px 28px;
+      border-radius: 50px;
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 700;
+      background: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255,255,255,0.1);
+    }
+
+    /* === FOOTER === */
+    footer {
+      width: 100%;
+      text-align: center;
+      padding: 40px 0;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 60px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 950px) {
+      .hero {
+        flex-direction: column;
+        padding: 120px 24px 60px;
+        text-align: center;
+      }
+      .nav {
+        justify-content: center;
+        padding: 20px;
+      }
+      h1 {
+        font-size: 38px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="halaman 2 ravi.html">About</a>
+    <a href="halaman 3 ravi.html">Jurusan</a>
+    <a href="halaman 4 ravi.html">Komponen Elektronika</a>
+    
+  </nav>
+
+  <section class="hero">
+    <div class="left">
+      <h1>Hi, I'm <span> Ravi Akbar</span><br>Ini Adalah Web Portofolio Saya</h1>
+      <p class="lead"><b>Web Ini Akan Menampilkan Tentang Saya (About) Dan Tentang jurusan SMK Saya.</b></p>
+
+      <div class="cta-row">
+        <a class="btn-main" href="">M.RAVI AKBAR</a>
+        <a class="btn-ghost" href="" target="_blank">KELAS XI AV</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    
+  </footer>
+
+</body>
+</html>

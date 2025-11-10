@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravi Akbar — Audio Video</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --muted: #bfbfbf;
+      --accent: #fff;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      letter-spacing: -1px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 600px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .btn-next {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1.5px solid var(--accent);
+      border-radius: 30px;
+      text-decoration: none;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .btn-next:hover {
+      background: var(--accent);
+      color: #000;
+    }
+
+    /* Efek fade in saat load */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fade 1s ease forwards;
+    }
+
+    @keyframes fade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      h1 { font-size: 2.2rem; }
+      h2 { font-size: 1.2rem; }
+      p { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="fade-in">
+    <h1>Tentang Saya</h1>
+    <h2></h2>
+    <p>Hai, Saya Ravi Akbar, Saya Adalah Siswa Dari <strong>SMK 2 NEGERI PEKANBARU</strong> Jurusan Saya Adalah Audio Video Atau (TAV), Saya Kelahiran Kota Pekanbaru, Hobi Saya Yaitu Bermain Badminton, Tujuan Web Ini Dibuat Yaitu Tugas Dari Bu Nina.</p>
+
+    <a href="halaman 1 ravi.html" class="btn-next">Back</a>
+  </div>
+</body>
+</html>

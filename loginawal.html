@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RAPHAELLL666 — Login</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      background: linear-gradient(135deg, #000 80%, #111);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .menu-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: transparent;
+      border: 1.5px solid #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-weight: 700;
+      cursor: pointer;
+      color: #fff;
+      transition: 0.3s;
+    }
+
+    .menu-icon:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .btn-hello {
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 18px;
+      font-weight: 600;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+      transition: 0.3s;
+    }
+
+    .btn-hello:hover {
+      background: #000;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    h1 {
+      margin-top: 25px;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #fff;
+    }
+
+    h1 span {
+      color: #fff;
+      border-bottom: 2px solid #fff;
+      padding-bottom: 3px;
+    }
+
+    p {
+      margin: 15px 0 30px;
+      max-width: 400px;
+      color: #bbb;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    input {
+      width: 260px;
+      padding: 10px;
+      border: 1.5px solid #fff;
+      border-radius: 8px;
+      background-color: transparent;
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    input:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      outline: none;
+      border-color: #ccc;
+    }
+
+    button {
+      background-color: #fff;
+      color: #000;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    button:hover {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #fff;
+    }
+
+    .error {
+      color: #ff6666;
+      font-size: 0.9em;
+      margin-top: 5px;
+    }
+
+    /* Efek animasi halus masuk */
+    body {
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="menu-icon">☰</div>
+
+  <div class="btn-hello">WELCOME</div>
+  <h1><span>RAVI AKBAR</span></h1>
+  <p>Masukkan username </p>
+
+  <form onsubmit="return checkLogin()">
+    <input type="text" id="username" placeholder="Masukkan nama kamu" required>
+    <button type="submit">Login</button>
+    <div class="error" id="error-message"></div>
+  </form>
+
+  <script>
+    function checkLogin() {
+      const user = document.getElementById("username").value.trim();
+      const errorMsg = document.getElementById("error-message");
+
+      if (user === "") {
+        errorMsg.textContent = "⚠ Username tidak boleh kosong!";
+        return false;
+      } else {
+        localStorage.setItem("username", user);
+        window.location.href = "halaman 1 ravi.html";
+        return false;
+      }
+    }
+  </script>
+
+</body>
+
+</html>
